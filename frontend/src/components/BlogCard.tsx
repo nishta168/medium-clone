@@ -32,9 +32,9 @@ export function BlogCard ({
                     {content.slice(0,150)} { content.length <= 150 ? null : '...'}
                 </div>
                 <div className="flex mt-6">
-                    <div className="bg-gray-200 text-sm p-1 px-2 rounded-2xl dark:bg-gray-700 dark:text-gray-300">
+                    {tag !== "" ? <div className="bg-gray-200 text-sm p-1 px-2 rounded-2xl dark:bg-gray-700 dark:text-gray-300">
                         {tag}
-                    </div>
+                    </div>: null}                    
                     <div className="ml-3 text-xs text-gray-400 self-center">
                         {Math.ceil((content.length/25)/60)} min read
                     </div>

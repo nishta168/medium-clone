@@ -4,6 +4,8 @@ import { Quote } from "../components/Quote";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 import { useNavigate } from "react-router-dom";
+import { Appbar } from "../components/Appbar";
+import { BlogSkeleton } from "../components/BlogSkeleton";
 
 export function Signup(){
     const [authorized, setAuthorized] = useState(false);
@@ -19,8 +21,11 @@ export function Signup(){
         })
         .then( res => {
             if(res.data.success == true){
-                setAuthorized(true);
-                setLoading(false)
+                navigate('/blogs')
+            }
+            else{
+                setAuthorized(false);
+                setLoading(false);
             }
         })
         .catch(()=>{            
@@ -31,7 +36,16 @@ export function Signup(){
 
     if(loading == true){
         return (
-            <div>loading...</div>
+            <div className=" min-h-screen dark:bg-gray-900">
+                <Appbar userFirstName={''}/>
+                <div className="lg:mx-96 pt-20">
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                </div>     
+            </div>
         )
     }
     else{

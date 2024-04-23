@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { useBlog } from "../hooks"
 import { Appbar } from "../components/Appbar";
 import { FullBlog } from "../components/Fullblog";
+import { FullBlogSkeleton } from "../components/FullBlogSkeleton";
 
 export const Blog = () => {
     let { id } = useParams()
@@ -12,7 +13,10 @@ export const Blog = () => {
 
     if(loading){
         return(
-            <div>loading...</div>
+            <div className="min-h-screen dark:bg-gray-800">
+                <Appbar userFirstName={firstName}/>
+                <FullBlogSkeleton ></FullBlogSkeleton> 
+            </div>
         )
     }
     if(!authorized){
@@ -25,7 +29,7 @@ export const Blog = () => {
     }
     if(blog){
         return (
-            <div className="dark:bg-gray-800">
+            <div className="min-h-screen dark:bg-gray-800">
                 <Appbar userFirstName={firstName}/>
                 <FullBlog blog={blog}></FullBlog> 
             </div>

@@ -30,8 +30,8 @@ export const FullBlog = ({ blog }: {blog: Blog}) => {
                     Author
                 </div>
                 <div className="flex mt-5 ">
-                    <div className="relative self-center inline-flex items-center justify-center w-6 h-6 w-10 overflow-hidden bg-gray-600 rounded-full dark:bg-gray-600">
-                        <span className="font-sm text-gray-300 dark:text-gray-300">{blog.author.firstName[0]}</span>
+                    <div className=" relative self-center inline-flex items-center justify-center w-14 h-9 overflow-hidden bg-gray-600 rounded-full dark:bg-gray-600">
+                        <div className="font-sm text-gray-300 dark:text-gray-300">{blog.author.firstName[0]}</div>
                     </div>
                     <div>
                         <div className="font-bold ml-4 text-xl dark:text-white">

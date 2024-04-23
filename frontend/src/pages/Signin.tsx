@@ -4,6 +4,8 @@ import { Quote } from "../components/Quote";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
+import { Appbar } from "../components/Appbar";
+import { BlogSkeleton } from "../components/BlogSkeleton";
 
 export function Signin(){
     const [authorized, setAuthorized] = useState(false);
@@ -30,7 +32,16 @@ export function Signin(){
 
     if(loading == true){
         return (
-            <div>loading...</div>
+            <div className=" min-h-screen dark:bg-gray-900">
+                <Appbar userFirstName={''}/>
+                <div className="lg:mx-96 pt-20">
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                    <BlogSkeleton></BlogSkeleton>
+                </div>     
+            </div>
         )
     }
     else{

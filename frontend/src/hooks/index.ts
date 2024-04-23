@@ -34,7 +34,6 @@ export const useBlogs = () => {
         .then( res => {
             if(res.data.success == true){
                 setAuthorized(true);
-                setLoading(false);
                 setFirstName(res.data.firstName);
                 axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
                     headers: {
@@ -85,7 +84,6 @@ export const useBlog = ({ id } : {id: string}) => {
         .then( res => {
             if(res.data.success == true){
                 setAuthorized(true);
-                setLoading(false);
                 setFirstName(res.data.firstName);
                 axios.get(`${BACKEND_URL}/api/v1/blog/${id}`, {
                     headers: {
