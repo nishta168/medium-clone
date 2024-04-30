@@ -18,7 +18,7 @@ export const FullBlog = ({ blog }: {blog: Blog}) => {
                 <div className="text-5xl font-bold dark:text-white ">
                     {blog.title}
                 </div>
-                <div className="py-5 text-gray-400 mb-10">
+                <div className="py-5 text-gray-500 dark:text-gray-400 mb-10">
                     Posted on {dateParser(blog.created_at)}
                 </div>
                 <div className="dark:text-white">
@@ -37,7 +37,7 @@ export const FullBlog = ({ blog }: {blog: Blog}) => {
                         <div className="font-bold ml-4 text-xl dark:text-white">
                             {blog.author.firstName} {blog.author.lastName}
                         </div>
-                        <div className="text-gray-400 text-sm ml-4 mt-2">
+                        <div className="text-gray-500 dark:text-gray-400 text-sm ml-4 mt-2">
                             Master of mirth, purveyor of puns, and the funniest person in the kingdom
                         </div>
                     </div>
