@@ -13,7 +13,7 @@ export const Blog = () => {
 
     if(loading){
         return(
-            <div className="min-h-screen dark:bg-gray-800">
+            <div className="min-h-screen ">
                 <Appbar userFirstName={firstName}/>
                 <FullBlogSkeleton ></FullBlogSkeleton> 
             </div>
@@ -29,7 +29,7 @@ export const Blog = () => {
     }
     if(blog){
         return (
-            <div className="min-h-screen dark:bg-gray-800">
+            <div className="min-h-screen">
                 <Appbar userFirstName={firstName}/>
                 <FullBlog blog={blog}></FullBlog> 
             </div>

@@ -36,15 +36,8 @@ export function Signup(){
 
     if(loading == true){
         return (
-            <div className=" min-h-screen dark:bg-gray-900">
-                <Appbar userFirstName={''}/>
-                <div className="lg:mx-96 pt-20">
-                    <BlogSkeleton></BlogSkeleton>
-                    <BlogSkeleton></BlogSkeleton>
-                    <BlogSkeleton></BlogSkeleton>
-                    <BlogSkeleton></BlogSkeleton>
-                    <BlogSkeleton></BlogSkeleton>
-                </div>     
+            <div>
+                
             </div>
         )
     }

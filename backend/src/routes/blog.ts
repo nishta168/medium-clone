@@ -33,13 +33,13 @@ blogRouter.post('/', async (c) => {
               message: "Incorrect inputs"
             })
         }
-    
+        //add fe and be logic for tags
         const blog = await prisma.blog.create({
             data: {
                 title: parsedBody.data.title,
+                description: parsedBody.data.description,
                 content: parsedBody.data.content,
                 authorId: id,
-                tag: parsedBody.data.tag
             }
         })
 
@@ -77,7 +77,7 @@ blogRouter.put('/', async (c) => {
             data: {
                 title: parsedBody.data.title,
                 content: parsedBody.data.content,
-                tag: parsedBody.data.tag
+                // tag: parsedBody.data.tag
             },
             where: {
                 id: parsedBody.data.id,
@@ -125,6 +125,7 @@ blogRouter.delete('/:id', async(c) =>{
             success: true
         })
     }catch(err){
+        console.log(err)
         return c.json({
             message: 'Delete failed',
             success: false
@@ -142,7 +143,8 @@ blogRouter.get('/bulk', async (c) => {
         const blogs = await prisma.blog.findMany({
             select: {
                 title: true,
-                content: true,
+                description: true,
+                content: false,
                 id: true,
                 created_at: true,
                 updated_at: true,

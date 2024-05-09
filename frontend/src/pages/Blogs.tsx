@@ -10,7 +10,7 @@ export const Blogs = ()=>{
 
     if(loading){
         return (
-            <div className=" min-h-screen dark:bg-gray-900">
+            <div className=" min-h-screen">
                 <Appbar userFirstName={firstName}/>
                 <div className="lg:mx-96 pt-20">
                     <BlogSkeleton></BlogSkeleton>
@@ -32,10 +32,10 @@ export const Blogs = ()=>{
     }
     if(blogs){
         return (
-            <div className="min-h-screen dark:bg-gray-900">
+            <div className="min-h-screen">
                 <Appbar userFirstName={firstName}/>
                 <div className="lg:mx-96 pt-20">
-                    {blogs.map( blog => <BlogCard title={blog.title} content={blog.content} authorName={`${blog.author.firstName} ${blog.author.lastName}`} tag={blog.tag} date={blog.created_at} id={blog.id}/>)}
+                    {blogs.map( blog => <BlogCard title={blog.title} description={blog.description} authorName={`${blog.author.firstName} ${blog.author.lastName}`} tag={blog.tag} date={blog.created_at} id={blog.id}/>)}
                 </div>     
             </div>
         )
