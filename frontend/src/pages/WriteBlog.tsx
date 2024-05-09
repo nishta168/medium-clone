@@ -2,8 +2,6 @@ import { useAuthorization } from "../hooks"
 import { PublishAppbar } from "../components/PublishAppBar"
 import { useNavigate } from "react-router-dom"
 import Tiptap from "../components/Tiptap"
-import { Appbar } from "../components/Appbar"
-import { BlogSkeleton } from "../components/BlogSkeleton"
 
 
 export const WriteBlog = () =>{

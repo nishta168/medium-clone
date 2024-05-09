@@ -4,8 +4,6 @@ import { Quote } from "../components/Quote";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 import { useNavigate } from "react-router-dom";
-import { Appbar } from "../components/Appbar";
-import { BlogSkeleton } from "../components/BlogSkeleton";
 
 export function Signup(){
     const [authorized, setAuthorized] = useState(false);

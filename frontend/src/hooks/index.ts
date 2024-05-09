@@ -51,7 +51,7 @@ export const useBlogs = () => {
                 });
             }
         })
-        .catch((e)=>{            
+        .catch(()=>{            
             setAuthorized(false);
             setLoading(false)            
         })
@@ -116,7 +116,7 @@ export const useBlog = ({ id } : {id: string}) => {
                 });
             }
         })
-        .catch((e)=>{            
+        .catch(()=>{            
             setAuthorized(false);
             setLoading(false)            
         })
@@ -152,7 +152,7 @@ export const useAuthorization = () => {
                 setLoading(false)
             }
         })
-        .catch((e)=>{            
+        .catch(()=>{            
             setAuthorized(false);
             setLoading(false)            
         })

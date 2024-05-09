@@ -4,9 +4,6 @@ import StarterKit from '@tiptap/starter-kit'
 import Placeholder from '@tiptap/extension-placeholder'
 import { EditorMenuBar } from './EditorMenuBar'
 import { useState } from 'react'
-import { json } from 'react-router-dom'
-
-
 
 const extensions = [
   StarterKit,  
