@@ -1,9 +1,10 @@
 
-import { EditorProvider, JSONContent } from '@tiptap/react'
+import { EditorProvider, JSONContent, BubbleMenu, FloatingMenu } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import Placeholder from '@tiptap/extension-placeholder'
 import { EditorMenuBar } from './EditorMenuBar'
 import { useState } from 'react'
+import { BubbleMenuBar } from './BubbleMenuBar'
 
 const extensions = [
   StarterKit,  
@@ -41,6 +42,7 @@ export default () => {
             }
         }
       }>
+      <BubbleMenu><BubbleMenuBar/></BubbleMenu>
        
     </EditorProvider>
   )
