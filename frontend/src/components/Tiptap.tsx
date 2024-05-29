@@ -1,5 +1,5 @@
 
-import { EditorProvider, JSONContent, BubbleMenu, FloatingMenu } from '@tiptap/react'
+import { EditorProvider, JSONContent, BubbleMenu } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import Placeholder from '@tiptap/extension-placeholder'
 import { EditorMenuBar } from './EditorMenuBar'
